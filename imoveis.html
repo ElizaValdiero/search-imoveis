@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis - Search Imóveis</title>
+    <link rel="stylesheet" href="css/imoveis.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo da Corretora">
+            <span>Search&Imóveis</span>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="filtros">
+        <h2>Encontre seu imóvel</h2>
+        <form id="form-filtros" onsubmit="filtrarImoveis(event)">
+            <div class="filtro-container">
+                <select name="tipo" id="filtro-tipo">
+                    <option value="">Todos os tipos</option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="kitnet">Kitnet</option>
+                </select>
+
+                <select name="finalidade" id="filtro-finalidade">
+                    <option value="">Todas finalidades</option>
+                    <option value="aluguel">Aluguel</option>
+                    <option value="venda">Venda</option>
+                </select>
+
+                <select name="preco" id="filtro-preco">
+                    <option value="">Todas faixas de preço</option>
+                    <option value="1000">Até R$ 1.000</option>
+                    <option value="3000">Até R$ 3.000</option>
+                    <option value="5000">Até R$ 5.000</option>
+                    <option value="mais">Mais de R$ 5.000</option>
+                </select>
+
+                <button type="submit">Buscar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="lista-imoveis">
+        <div class="card" data-tipo="casa" data-finalidade="aluguel" data-preco="3000">
+            <img src="assets/casa1.jpg" alt="Casa moderna">
+            <div class="card-content">
+                <h3>Casa moderna com 2 quartos</h3>
+                <p class="preco">🏷️ Aluguel - R$ 3.000/mês</p>
+                <p class="detalhes">📍 Florianópolis, SC</p>
+                <a href="detalhes.html?id=IMV-001" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <div class="card" data-tipo="apartamento" data-finalidade="venda" data-preco="350000">
+            <img src="assets/apto1.jpg" alt="Apartamento central">
+            <div class="card-content">
+                <h3>Apartamento no centro</h3>
+                <p class="preco">🏷️ Venda - R$ 350.000</p>
+                <p class="detalhes">📍 Florianópolis, SC</p>
+                <a href="detalhes.html?id=IMV-002" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <div class="card" data-tipo="casa" data-finalidade="venda" data-preco="520000">
+            <img src="assets/casa2.jpg" alt="Casa grande">
+            <div class="card-content">
+                <h3>Casa espaçosa com área gourmet</h3>
+                <p class="preco">🏷️ Venda - R$ 520.000</p>
+                <p class="detalhes">📍 Florianópolis, SC</p>
+                <a href="detalhes.html?id=IMV-003" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <div class="card" data-tipo="casa" data-finalidade="aluguel" data-preco="2500">
+            <img src="assets/casa1.jpg" alt="Casa confortável">
+            <div class="card-content">
+                <h3>Casa confortável 3 quartos</h3>
+                <p class="preco">🏷️ Aluguel - R$ 2.500/mês</p>
+                <p class="detalhes">📍 São José, SC</p>
+                <a href="detalhes.html?id=IMV-004" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <div class="card" data-tipo="apartamento" data-finalidade="aluguel" data-preco="1800">
+            <img src="assets/apto1.jpg" alt="Apartamento moderno">
+            <div class="card-content">
+                <h3>Apartamento moderno 2 quartos</h3>
+                <p class="preco">🏷️ Aluguel - R$ 1.800/mês</p>
+                <p class="detalhes">📍 Palhoça, SC</p>
+                <a href="detalhes.html?id=IMV-005" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <div class="card" data-tipo="casa" data-finalidade="venda" data-preco="850000">
+            <img src="assets/casa2.jpg" alt="Casa de praia">
+            <div class="card-content">
+                <h3>Casa de praia com vista</h3>
+                <p class="preco">🏷️ Venda - R$ 850.000</p>
+                <p class="detalhes">📍 Florianópolis, SC</p>
+                <a href="detalhes.html?id=IMV-006" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Search Imóveis - Corretora de Aluguel e Venda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

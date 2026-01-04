@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos - Search&Imóveis</title>
+    <link rel="stylesheet" href="css/favoritos.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo da Corretora">
+            <span>Search&Imóveis</span>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="favoritos.html" class="active">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="filtros">
+        <h2>❤️ Meus Imóveis Favoritos</h2>
+        <p style="color: #666; margin-top: 10px;">Aqui estão todos os imóveis que você salvou</p>
+    </section>
+
+    <section class="lista-imoveis" id="listaFavoritos">
+    </section>
+
+    <div id="mensagemVazia" style="display: none;">
+        <div>💔</div>
+        <h3>Nenhum imóvel favoritado ainda</h3>
+        <p>Comece a adicionar seus imóveis favoritos para vê-los aqui!</p>
+        <a href="imoveis.html">Ver Imóveis Disponíveis</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Search Imóveis - Corretora de Aluguel e Venda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/favoritos.js"></script>
+</body>
+
+</html>

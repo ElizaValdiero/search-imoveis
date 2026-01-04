@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel - Search&Imóveis</title>
+    <link rel="stylesheet" href="css/detalhes.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"> <img src="assets/logo.png" alt="Logo da Corretora"> <span>Search&Imóveis</span> </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="breadcrumb"> <a href="index.html">Home</a> <span>›</span> <a href="imoveis.html">Imóveis</a>
+        <span>›</span> <span class="current">Detalhes do Imóvel</span>
+    </nav>
+    <div class="detalhes-container">
+        <section class="galeria">
+            <div class="foto-principal"> <img id="fotoPrincipal" src="assets/casa1.jpg" alt="Foto principal do imóvel">
+                <button class="nav-btn prev" onclick="prevFoto()">‹</button> <button class="nav-btn next"
+                    onclick="nextFoto()">›</button>
+            </div>
+            <div class="miniaturas"> <img src="assets/casa1.jpg" alt="Foto 1" onclick="trocarFoto(0)" class="active">
+                <img src="assets/casa2.jpg" alt="Foto 2" onclick="trocarFoto(1)"> <img src="assets/apto1.jpg"
+                    alt="Foto 3" onclick="trocarFoto(2)"> <img src="assets/casa1.jpg" alt="Foto 4"
+                    onclick="trocarFoto(3)">
+            </div>
+        </section>
+        <section class="info-principal">
+            <div class="header-info">
+                <h1 id="tituloImovel">Casa moderna com 2 quartos</h1>
+                <div class="preco-destaque"> <span class="tipo-negocio">ALUGUEL</span> <span class="preco"
+                        id="precoImovel">R$ 3.000/mês</span> </div>
+            </div>
+            <div class="localizacao"> <span class="icon">📍</span>
+                <p id="enderecoImovel">Rua das Palmeiras, 456 - Centro, Florianópolis, SC</p>
+            </div>
+            <div class="caracteristicas-rapidas">
+                <div class="caracteristica"> <span class="icon">🛏️</span>
+                    <div> <strong>2</strong>
+                        <p>Quartos</p>
+                    </div>
+                </div>
+                <div class="caracteristica"> <span class="icon">🚿</span>
+                    <div> <strong>2</strong>
+                        <p>Banheiros</p>
+                    </div>
+                </div>
+                <div class="caracteristica"> <span class="icon">🚗</span>
+                    <div> <strong>2</strong>
+                        <p>Vagas</p>
+                    </div>
+                </div>
+                <div class="caracteristica"> <span class="icon">📏</span>
+                    <div> <strong>120m²</strong>
+                        <p>Área Total</p>
+                    </div>
+                </div>
+            </div>
+            <div class="descricao">
+                <h2>Sobre o Imóvel</h2>
+                <p id="descricaoImovel"> Linda casa moderna localizada em bairro nobre de Florianópolis. O imóvel conta
+                    com acabamento de primeira qualidade, ampla sala de estar com pé direito alto, cozinha planejada
+                    completa, 2 suítes com armários embutidos, área de serviço, quintal com churrasqueira e garagem
+                    coberta para 2 carros. </p>
+                <p> Excelente localização com fácil acesso a supermercados, farmácias, escolas e transporte público.
+                    Região tranquila e segura, perfeita para famílias. </p>
+            </div>
+            <div class="caracteristicas-detalhadas">
+                <h2>Características</h2>
+                <div class="lista-caracteristicas">
+                    <div class="coluna">
+                        <ul>
+                            <li>✓ Churrasqueira</li>
+                            <li>✓ Armários na cozinha</li>
+                            <li>✓ Quintal</li>
+                            <li>✓ Área de serviço</li>
+                        </ul>
+                    </div>
+                    <div class="coluna">
+                        <ul>
+                            <li>✓ Garagem coberta</li>
+                            <li>✓ Portão eletrônico</li>
+                            <li>✓ Aceita pets</li>
+                            <li>✓ Piso cerâmico</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info-adicional">
+                <h2>Informações Adicionais</h2>
+                <div class="info-grid">
+                    <div class="info-item"> <strong>Código:</strong> <span id="codigoImovel">IMV-001</span> </div>
+                    <div class="info-item"> <strong>IPTU:</strong> <span>R$ 120/mês</span> </div>
+                    <div class="info-item"> <strong>Condomínio:</strong> <span>Não há</span> </div>
+                    <div class="info-item"> <strong>Disponível a partir de:</strong> <span>Imediato</span> </div>
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar-acoes">
+            <div class="card-contato">
+                <h3>Interessado?</h3>
+                <p>Entre em contato conosco para agendar uma visita!</p> <a
+                    href="https://wa.me/5548999999999?text=Olá! Tenho interesse no imóvel: Casa moderna com 2 quartos (IMV-001)"
+                    class="btn btn-whatsapp" target="_blank"> <span class="icon">💬</span> WhatsApp </a> <a
+                    href="contato.html" class="btn btn-email"> <span class="icon">✉️</span> Enviar Email </a> <a
+                    href="tel:+554832345678" class="btn btn-telefone"> <span class="icon">📞</span> (48) 3234-5678 </a>
+                <button class="btn btn-favorito" onclick="toggleFavorito()"> <span class="icon"
+                        id="iconeFavorito">🤍</span> <span id="textoFavorito">Adicionar aos Favoritos</span> </button>
+            </div>
+        </aside>
+    </div>
+    <section class="mapa-section">
+        <h2>Localização</h2>
+        <p class="endereco-mapa">📍 Rua das Palmeiras, 456 - Centro, Florianópolis, SC</p>
+        <div class="mapa-container"> <iframe id="googleMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.1896892451647!2d-48.54915492378679!3d-27.59491087621648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527394eb2c632d7%3A0x81bc550b6a04c746!2sCentro%2C%20Florian%C3%B3polis%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"> </iframe> </div>
+        <div class="info-localizacao">
+            <div class="info-loc-item"> <span class="icon">🏪</span>
+                <div> <strong>Comércio próximo</strong>
+                    <p>Supermercados a 5min</p>
+                </div>
+            </div>
+            <div class="info-loc-item"> <span class="icon">🚌</span>
+                <div> <strong>Transporte</strong>
+                    <p>Ponto de ônibus a 200m</p>
+                </div>
+            </div>
+            <div class="info-loc-item"> <span class="icon">🏫</span>
+                <div> <strong>Educação</strong>
+                    <p>Escolas na região</p>
+                </div>
+            </div>
+            <div class="info-loc-item"> <span class="icon">🏥</span>
+                <div> <strong>Saúde</strong>
+                    <p>Hospital a 10min</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relacionados">
+        <h2>Imóveis Similares</h2>
+        <div class="cards-relacionados">
+            <div class="card-mini"> <img src="assets/casa2.jpg" alt="Casa similar">
+                <div class="card-mini-info">
+                    <h4>Casa espaçosa</h4>
+                    <p class="preco-mini">R$ 3.500/mês</p> <a href="detalhes.html?id=IMV-003" class="link-ver">Ver
+                        detalhes →</a>
+                </div>
+            </div>
+            <div class="card-mini"> <img src="assets/apto1.jpg" alt="Apartamento">
+                <div class="card-mini-info">
+                    <h4>Apartamento no centro</h4>
+                    <p class="preco-mini">R$ 2.000/mês</p> <a href="detalhes.html?id=IMV-002" class="link-ver">Ver
+                        detalhes →</a>
+                </div>
+            </div>
+            <div class="card-mini"> <img src="assets/casa1.jpg" alt="Casa">
+                <div class="card-mini-info">
+                    <h4>Casa confortável</h4>
+                    <p class="preco-mini">R$ 2.500/mês</p> <a href="detalhes.html?id=IMV-004" class="link-ver">Ver
+                        detalhes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Search Imóveis - Corretora de Aluguel e Venda. Todos os direitos reservados.</p>
+    </footer><a href="https://wa.me/5548999999999" class="whatsapp-float"
+        target="_blank" title="Fale conosco no WhatsApp"> <span class="whatsapp-icon">💬</span> </a>
+    <script src="js/script.js"></script>
+    <script src="js/detalhes.js"></script>
+</body>
+
+</html>

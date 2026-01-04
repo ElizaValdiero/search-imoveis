@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Search&Imóveis</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo da Corretora">
+            <span>Search&Imóveis</span>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h1>Encontre o imóvel ideal para você</h1>
+        <p>Casas, Apartamentos e Kitnets para alocação e venda na Grande Florianópolis</p>
+        <a href="imoveis.html" class="btn">Ver Imóveis</a>
+    </section>
+
+    <section class="destaques">
+        <h2>Imóveis em destaque</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/casa1.jpg" alt="Casa moderna">
+                <h3>Casa moderna com 2 quartos</h3>
+                <p>🏷️ Aluguel - R$3.000/mês</p>
+                <a href="imoveis.html" class="btn-card">Ver mais</a>
+            </div>
+            <div class="card">
+                <img src="assets/apto1.jpg" alt="Apartamento central">
+                <h3>Apartamento no centro</h3>
+                <p>🏷️ Venda - R$350.000</p>
+                <a href="imoveis.html" class="btn-card">Ver mais</a>
+            </div>
+            <div class="card">
+                <img src="assets/casa2.jpg" alt="Casa grande">
+                <h3>Casa espaçosa com área gourmet</h3>
+                <p>🏷️ Venda - R$520.000</p>
+                <a href="imoveis.html" class="btn-card">Ver mais</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Search Imóveis - Corretora de Aluguel e Venda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
