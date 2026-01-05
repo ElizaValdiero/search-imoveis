@@ -76,20 +76,14 @@ const imoveis = [
     }
 ];
 
-// ===============================
-// CAPTURA ID DA URL
-// ===============================
+
 const params = new URLSearchParams(window.location.search);
 const idImovel = params.get("id");
 
-// ===============================
-// BUSCA IMÓVEL
-// ===============================
+
 const imovel = imoveis.find(i => i.id === idImovel);
 
-// ===============================
-// PREENCHE A PÁGINA
-// ===============================
+
 if (imovel) {
     document.getElementById("tituloImovel").textContent = imovel.titulo;
     document.getElementById("precoImovel").textContent = imovel.preco;
