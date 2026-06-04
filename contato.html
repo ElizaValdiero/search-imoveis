@@ -145,10 +145,10 @@
         const form = document.getElementById('contactForm');
         const msgSucesso = document.getElementById('msg-sucesso');
 
-        msgSucesso.style.display = 'none'; 
+        msgSucesso.style.display = 'none';
 
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
 
             const formData = new FormData(form);
 
@@ -160,10 +160,21 @@
                 }
             })
                 .then(response => {
-
                     msgSucesso.style.display = 'block';
-                    form.reset();
 
+                    const nome = formData.get('nome');
+                    const telefone = formData.get('telefone').replace(/\D/g, '');
+
+                    fetch('http://127.0.0.1:5000/enviar-whatsapp', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ nome: nome, telefone: telefone })
+                    })
+                        .then(r => r.json())
+                        .then(data => console.log('WhatsApp:', data))
+                        .catch(err => console.log('Erro WhatsApp:', err));
+
+                    form.reset();
 
                     setTimeout(() => {
                         msgSucesso.style.display = 'none';
@@ -171,7 +182,7 @@
 
                     window.scrollTo({
                         top: msgSucesso.offsetTop - 100,
-                        behavior: "smooth"
+                        behavior: 'smooth'
                     });
                 })
                 .catch(error => {

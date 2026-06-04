@@ -1,10 +1,10 @@
 # 🏠 Search&Imóveis
 
-Site completo de imobiliária desenvolvido com HTML, CSS e JavaScript puro, focado em apresentar imóveis para aluguel e venda na região de Florianópolis/SC.
+Site completo de imobiliária desenvolvido com HTML, CSS e JavaScript puro, com backend em Python para integração com WhatsApp, focado em apresentar imóveis para aluguel e venda na região de Florianópolis/SC.
 
 ## 🌐 Demo Online
 
-🔗 **Acesse o site:** [https://mellow-hotteok-a257cc.netlify.app/]
+🔗 **Acesse o site:** []
 
 ---
 
@@ -36,11 +36,12 @@ Criar um site intuitivo e responsivo que:
 - **Sistema de favoritos** para salvar imóveis de interesse
 - **Informações completas** com características, localização e preços
 - **Contato direto** via WhatsApp, email ou telefone
+- **Notificação automática** via WhatsApp ao enviar o formulário de contato
 
 ### Para a imobiliária:
 - **Presença digital profissional** com design moderno
 - **Vitrine de imóveis** organizada e atrativa
-- **Formulário de contato** que envia mensagens diretamente por email
+- **Formulário de contato** que envia mensagens diretamente por email e WhatsApp
 - **Responsividade total** para alcançar clientes mobile
 - **Fácil manutenção** sem necessidade de banco de dados complexo
 
@@ -84,6 +85,7 @@ Formulário completo de contato com:
 - Campos para nome, email, telefone, assunto e mensagem
 - Validação de campos obrigatórios
 - Integração com FormSubmit para envio direto ao email
+- Envio automático de mensagem de confirmação via Twilio WhatsApp API
 - Cards informativos com telefones, endereço e horário de atendimento
 - Mensagem de confirmação após envio bem-sucedido
 
@@ -119,6 +121,9 @@ Utiliza localStorage do navegador para salvar preferências do usuário sem nece
 ### 🔄 Carregamento Dinâmico
 Cada imóvel carrega seus dados específicos através da URL (ex: `detalhes.html?id=IMV-001`), permitindo que diferentes propriedades sejam exibidas na mesma estrutura de página.
 
+### 📲 Notificação via WhatsApp
+Ao enviar o formulário de contato, o usuário recebe automaticamente uma mensagem de confirmação no WhatsApp via Twilio API, proporcionando uma experiência mais completa e profissional.
+
 ---
 
 ## 🛠️ Tecnologias e Recursos
@@ -128,14 +133,24 @@ Cada imóvel carrega seus dados específicos através da URL (ex: `detalhes.html
 - CSS3 com variáveis, flexbox e grid
 - JavaScript vanilla para lógica e interatividade
 
-**APIs e Integrações:**
-- Google Maps para exibição de localização
-- FormSubmit para envio de formulários sem backend
-- WhatsApp Business Link para contato direto
+**Backend:**
+- Python 3.12 com Flask para servidor de notificações
+- Flask-CORS para comunicação entre frontend e backend
+
+**APIs:**
+- Twilio WhatsApp API — envia mensagem automática de confirmação ao usuário após preenchimento do formulário de contato
+- Google Maps Embed — exibe localização dos imóveis via iframe
+
+**Integrações:**
+- FormSubmit — envio do formulário de contato direto para email, sem backend próprio
+- WhatsApp Business Link via wa.me/ — botão de contato direto que abre conversa no WhatsApp
 
 **Armazenamento:**
 - LocalStorage para sistema de favoritos
 - Objetos JavaScript para dados dos imóveis
+
+**Segurança:**
+- Variáveis de ambiente via .env para proteção das credenciais da API
 
 ---
 
@@ -167,12 +182,13 @@ Cada imóvel possui informações completas de endereço, características, foto
 
 ## 🚀 Evolução do Projeto
 
-O site foi desenvolvido para funcionar de forma autônoma, sem necessidade de servidor backend ou banco de dados, tornando-o ideal para:
+O projeto iniciou como um site estático 100% frontend e evoluiu com a adição de um backend Python para integração com a Twilio WhatsApp API, tornando-o uma aplicação fullstack simples, ideal para:
 
 - **Protótipo inicial** de uma imobiliária
-- **MVP (Produto Mínimo Viável)** para testar o mercado
-- **Base sólida** para futuras expansões com backend
+- **Base sólida** para futuras expansões
 - **Portfólio** de desenvolvimento web
+
+---
 
 ## 📍 Informações da Imobiliária
 
@@ -201,7 +217,9 @@ Este projeto foi uma oportunidade de trabalhar com:
 - Gerenciamento de estado com localStorage
 - Manipulação avançada do DOM
 - Design responsivo com mobile-first approach
-- Integração com APIs externas
+- Integração com Twilio WhatsApp API
+- Criação de backend com Python e Flask
+- Proteção de credenciais com variáveis de ambiente (.env)
 - Otimização de performance
 - Boas práticas de código limpo
 
@@ -210,5 +228,7 @@ Os principais desafios superados foram:
 - Carregamento dinâmico de dados sem backend
 - Criação de filtros eficientes
 - Garantir responsividade perfeita em todos os dispositivos
+- Configuração do backend Python para comunicação com o frontend
+- Proteção das credenciais da API com .env e .gitignore
 
 **Desenvolvido com dedicação para oferecer a melhor experiência imobiliária online! 🏠❤️**
